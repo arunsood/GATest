@@ -50,21 +50,29 @@ body.full-background {
 .hide-left {
 	left:-4000px !important;
 	transition:all 1s ease-in-out;
+	-webkit-transition:all 1s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
 }
 
 .show-left {
 	left:50% !important;
 	transition:all 1s ease-in-out;
+	-webkit-transition:all 1s ease-in-out;
+	-moz-transition:all 1s ease-in-out;
 }
 
 .show-top {
 	top:50% !important;
 	transition:all 4s ease-in-out;
+	-webkit-transition:all 4s ease-in-out;
+	-moz-transition:all 4s ease-in-out;
 }
 
 .hide-top {
 	top:-4000px !important;
 	transition:all 2s ease-in-out;
+	-webkit-transition:all 2s ease-in-out;
+	-moz-transition:all 2s ease-in-out;
 }
 
 .border-radius {
