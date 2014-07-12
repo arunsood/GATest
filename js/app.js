@@ -41,7 +41,7 @@ document.addEventListener("click", function(event) {
 				var httpresponse = JSON.parse(xmlhttp.responseText);
 
 				if (httpresponse.Response == "False") {
-					alert(httpresponse.Error);
+					alert("Sorry! Your movie wasn't found!");
 
 					//Hide loading button
 					document.getElementById("movie-search-button").style.display = "inline-block";
@@ -77,7 +77,7 @@ document.addEventListener("click", function(event) {
 		xmlhttp.open(
 			"GET",
 			"http://www.omdbapi.com/?s=" + encodeURIComponent(title) + yearQuery,
-			false
+			true
 		);
 
 		xmlhttp.send();
@@ -117,7 +117,7 @@ function addCard(imdbID, count, lastId) {
 				var thisDiv = document.getElementById(httpresponse.imdbID);
 				thisDiv.className = thisDiv.className + " hide-top";
 
-				//If button is the last button take us back to the search
+				//If button is the last button take us back to the search with a 1 second delay to let the animation complete
 
 				if (httpresponse.imdbID == lastId) {
 					setTimeout(function() {
